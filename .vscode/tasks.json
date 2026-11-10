@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Validate deployment build",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Deploy GitHub Pages",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"deploy"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
