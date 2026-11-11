@@ -2,18 +2,18 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "Validate deployment build",
+			"label": "Deploy site to gh-pages",
 			"type": "shell",
 			"command": "npm",
 			"args": [
 				"run",
-				"build"
+				"deploy"
 			],
 			"isBackground": false,
 			"problemMatcher": []
 		},
 		{
-			"label": "Deploy GitHub Pages",
+			"label": "Redeploy custom domain to gh-pages",
 			"type": "shell",
 			"command": "npm",
 			"args": [

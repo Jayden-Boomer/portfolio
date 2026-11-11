@@ -98,6 +98,9 @@ const skills = {
     },
     {
       "name": "Vue"
+    },
+    {
+      "name": "React"
     }
   ],
   "softSkills": [
