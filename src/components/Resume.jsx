@@ -35,11 +35,13 @@ export default function Resume() {
         const resize = () => {
           if (disposed) return;
           const scale = Math.min(1, shell.clientWidth / 940);
-          mount.style.transform = `scale(${scale})`;
-          shell.style.height = `${Math.ceil(page.offsetHeight * scale) + 2}px`;
+          const transform = `scale(${scale})`;
+          const height = `${Math.ceil(page.offsetHeight * scale) + 2}px`;
+          if (mount.style.transform !== transform) mount.style.transform = transform;
+          if (shell.style.height !== height) shell.style.height = height;
         };
         observer = new ResizeObserver(resize);
-        observer.observe(shell);
+        observer.observe(shell.parentElement);
         observer.observe(page);
         resize();
         window.document.fonts.ready.then(resize);

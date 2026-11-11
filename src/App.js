@@ -31,7 +31,7 @@ export default function App() {
   </>;
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
-    <header className="mobile-header"><button type="button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="portfolio-navigation" onClick={() => setMenuOpen(!menuOpen)}><Icon name={menuOpen ? 'times' : 'bars'} /></button><a href="#home" onClick={() => setMenuOpen(false)}>{fullName}<span>Software Developer</span></a></header>
+    <header className="mobile-header"><button type="button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="portfolio-navigation" onClick={() => setMenuOpen(!menuOpen)}><Icon name={menuOpen ? 'times' : 'bars'} /></button><a className="mobile-header-brand" href="#home" onClick={() => setMenuOpen(false)}>{fullName}<span>Software Developer</span></a><a className="mobile-header-photo" href="#home" aria-label={`${fullName}, back to top`} onClick={() => setMenuOpen(false)}><img src={about.imageLink} alt="" width="44" height="44" /></a></header>
     {menuOpen && <button className="menu-backdrop" aria-label="Close navigation overlay" onClick={() => setMenuOpen(false)} />}
     <aside className={`sidebar ${menuOpen ? 'is-open' : ''}`}>
       <a className="profile-link" href="#home" aria-label={`${fullName}, back to top`} onClick={() => setMenuOpen(false)}><img src={about.imageLink} alt={fullName} width="140" height="140" /></a>

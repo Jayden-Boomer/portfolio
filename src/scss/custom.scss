@@ -549,9 +549,24 @@ strong {
     font-size:25px;
     padding:4px
   }
-  .mobile-header>a {
+  .mobile-header-brand {
     font-size:22px;
     line-height:1.2
+  }
+  .mobile-header-photo {
+    flex:0 0 44px;
+    width:44px;
+    height:44px;
+    margin-left:auto;
+    overflow:hidden;
+    border:2px solid #9db8df;
+    border-radius:50%
+  }
+  .mobile-header-photo img {
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover
   }
   .mobile-header span {
     display:block;
